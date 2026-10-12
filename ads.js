@@ -16,9 +16,10 @@ const ADS_CONFIG = {
     rewarded: "1234567893"
   },
   ENABLED: false, // set true after AdSense approval
-  SIMULATION_MODE: true, // fake $ counter for demo only, NOT real money
+  SIMULATION_MODE: false, // ads closed - no fake $ counting
+  ADS_VISIBLE: false, // false = hide all ads
   SIM_CPM: 3.50, // $3.50 per 1000 ad views (average)
-  INTERSTITIAL_EVERY_X_GAMEOVERS: 3
+  INTERSTITIAL_EVERY_X_GAMEOVERS: 999999 // effectively off
 };
 
 // Simulated balance - DEMO ONLY. Real balance lives in your AdSense dashboard.
@@ -56,6 +57,7 @@ function trackAdImpression(slotName) {
 // Interstitial logic - called by game.js on game over
 let gameOverCount = 0;
 function maybeShowInterstitial(onClose) {
+  if (ADS_CONFIG.ADS_VISIBLE === false) { onClose(); return; }
   gameOverCount++;
   if (gameOverCount % ADS_CONFIG.INTERSTITIAL_EVERY_X_GAMEOVERS !== 0) {
     onClose();
@@ -94,6 +96,10 @@ function loadRealAdsense() {
 
 window.addEventListener('DOMContentLoaded', () => {
   updateEarningsUI();
+  if (ADS_CONFIG.ADS_VISIBLE === false) {
+    document.querySelectorAll('.ad-slot, #earn, #interstitial').forEach(e => e.style.display = 'none');
+    return;
+  }
   loadRealAdsense();
   // Simulate banner impressions
   trackAdImpression('top-banner');

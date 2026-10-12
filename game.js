@@ -49,12 +49,11 @@ function gameOver() {
   const o = document.getElementById('overlay');
   o.classList.remove('hidden');
   o.innerHTML = `<h2>GAME OVER</h2><p>Score ${Math.floor(score)} • Best ${best} • Coins ${coins}</p>
-  <button class="btn" onclick="start()">PLAY AGAIN (ad every 3rd)</button>
-  <button class="btn secondary" onclick="revive()">REVIVE ▶ Watch Ad</button>`;
+  <button class="btn" onclick="start()">PLAY AGAIN</button>
+  <button class="btn secondary" onclick="revive()">REVIVE</button>`;
   try { maybeShowInterstitial(() => {}); } catch(e){}
 }
 function revive() {
-  try { trackAdImpression('rewarded'); } catch(e){}
   obstacles = [];
   running = true;
   document.getElementById('overlay').classList.add('hidden');
