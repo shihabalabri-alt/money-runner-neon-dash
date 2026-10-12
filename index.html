@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<title>Money Runner - Neon Dash</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><h1>MONEY RUNNER <span>• NEON DASH</span></h1><p>Tap / Space to jump. Dodge red. Grab gold.</p></header>
+
+<div class="ad-slot" id="ad-top">AD — TOP BANNER 320x50<small>Real AdSense loads here after you add ca-pub ID in ads.js</small>
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXX" data-ad-slot="1234567890" data-ad-format="auto"></ins>
+</div>
+
+<div id="wrap">
+<canvas id="game"></canvas>
+<div id="hud"><div id="score">0</div><div id="best">BEST 0</div></div>
+<div id="overlay"><h2>NEON DASH</h2><p>3rd death = interstitial ad.<br>Revive = rewarded ad.</p><button class="btn" onclick="start()">▶ PLAY</button></div>
+</div>
+
+<div id="controls"><button class="btn" style="flex:1" onclick="jump()">JUMP</button><button class="btn secondary" style="flex:1" onclick="start()">RESTART</button></div>
+
+<div class="ad-slot" id="ad-bottom">AD — BOTTOM BANNER 320x100<small>Sticky high-earning placement</small></div>
+
+<div id="earn">SIMULATED earnings (demo only, not real money): <b class="sim-balance">$0.0000</b> <button onclick="Earnings.reset()">reset</button><br>Real money appears ONLY in your Google AdSense dashboard → paid to your bank/card. I cannot store it for you. See ads.js top comments.</div>
+
+<div class="modal" id="interstitial"><div class="modal-box"><b>AD — INTERSTITIAL</b><div class="fake-ad"><h3>Your Ad Here</h3><p>Google full-screen ad after AdSense approval</p><small>Demo counts as $ earning</small></div><button class="btn" id="inter-close">Close in 5s</button></div></div>
+
+<footer>© You 100% owner • Host on Netlify/Vercel → AdSense → payout to card at $100 by Google</footer>
+<script src="ads.js"></script>
+<script src="game.js"></script>
+</body>
+</html>
