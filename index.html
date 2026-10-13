@@ -3,37 +3,37 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
-<title>Neon Dash — Money Runner</title>
-<link rel="stylesheet" href="style.css?v=2">
+<title>Turbo Racer — Neon Highway</title>
+<link rel="stylesheet" href="style.css?v=3">
 </head>
 <body>
 <div id="app">
   <header id="topbar">
-    <div class="logo">NEON <span>DASH</span></div>
+    <div class="logo">TURBO <span>RACER</span></div>
     <div class="stats">
       <div class="stat"><small>SCORE</small><b id="score">0</b></div>
       <div class="stat"><small>COINS</small><b id="coins">0</b></div>
       <div class="stat"><small>BEST</small><b id="best">0</b></div>
     </div>
     <div class="actions">
-      <button id="muteBtn" class="icon-btn" title="sound">🔊</button>
-      <button id="fsBtn" class="icon-btn" title="fullscreen">⛶</button>
+      <button id="muteBtn" class="icon-btn">🔊</button>
+      <button id="fsBtn" class="icon-btn">⛶</button>
     </div>
   </header>
   <div id="wrap">
     <canvas id="game"></canvas>
     <div id="overlay">
-      <h1 id="ovTitle">NEON DASH</h1>
-      <p id="ovSub">Space / Tap / JUMP to jump — double-jump allowed.<br>Dodge red blocks. Grab gold coins.</p>
-      <button class="btn big" id="playBtn">▶ PLAY</button>
+      <h1 id="ovTitle">TURBO RACER</h1>
+      <p id="ovSub">◀ ▶ / A D / drag to steer. Dodge traffic. Grab coins.<br>Survive longer = faster.</p>
+      <button class="btn big" id="playBtn">▶ DRIVE</button>
       <p class="hint">P = pause • M = mute</p>
     </div>
   </div>
   <div id="controls">
-    <button class="btn jump" id="jumpBtn">JUMP</button>
-    <button class="btn ghost" id="restartBtn">RESTART</button>
+    <button class="btn ghost big-touch" id="leftBtn">◀</button>
+    <button class="btn ghost big-touch" id="rightBtn">▶</button>
   </div>
 </div>
-<script src="game.js?v=2"></script>
+<script src="game.js?v=3"></script>
 </body>
 </html>
