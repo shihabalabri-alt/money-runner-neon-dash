@@ -3,16 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
-<title>Turbo Racer — Neon Highway</title>
-<link rel="stylesheet" href="style.css?v=3">
+<title>Ghost Traffic — Race Your Past</title>
+<link rel="stylesheet" href="style.css?v=4">
 </head>
 <body>
 <div id="app">
   <header id="topbar">
-    <div class="logo">TURBO <span>RACER</span></div>
+    <div class="logo">GHOST <span>TRAFFIC</span></div>
     <div class="stats">
+      <div class="stat"><small>LOOP</small><b id="loop">1</b></div>
       <div class="stat"><small>SCORE</small><b id="score">0</b></div>
-      <div class="stat"><small>COINS</small><b id="coins">0</b></div>
       <div class="stat"><small>BEST</small><b id="best">0</b></div>
     </div>
     <div class="actions">
@@ -23,8 +23,8 @@
   <div id="wrap">
     <canvas id="game"></canvas>
     <div id="overlay">
-      <h1 id="ovTitle">TURBO RACER</h1>
-      <p id="ovSub">◀ ▶ / A D / drag to steer. Dodge traffic. Grab coins.<br>Survive longer = faster.</p>
+      <h1 id="ovTitle">GHOST TRAFFIC</h1>
+      <p id="ovSub">Survive 25s per loop. Every loop, your ghost replays your exact drive — and kills you.<br>◀ ▶ / A D / drag to steer. Loop 5 = dodge 4 selves + traffic.</p>
       <button class="btn big" id="playBtn">▶ DRIVE</button>
       <p class="hint">P = pause • M = mute</p>
     </div>
@@ -34,6 +34,6 @@
     <button class="btn ghost big-touch" id="rightBtn">▶</button>
   </div>
 </div>
-<script src="game.js?v=3"></script>
+<script src="game.js?v=4"></script>
 </body>
 </html>
